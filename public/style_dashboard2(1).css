@@ -1,0 +1,177 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #0a192f; /* Azul-escuro elegante */
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00aaff; /* Cor de destaque em azul claro */
+}
+
+/* Espaçamento para evitar sobreposição do conteúdo */
+#admin_dashboard_main {
+    margin-top: 100px; /* Ajuste conforme a altura do seu header */
+    padding: 20px;
+}
+
+/* Menu de Navegação Lateral */
+.sidebar {
+    position: fixed;
+    top: 100px; /* Abaixo do header */
+    left: 0;
+    width: 220px;
+    height: calc(100% - 100px); /* Altura da sidebar considerando o header */
+    background-color: #0a192f; /* Azul-escuro elegante */
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Painel Principal */
+#admin_dashboard_main {
+    margin-left: 240px; /* Para acomodar o menu lateral */
+    padding: 20px;
+}
+
+.dashboard-overview, .dashboard-shortcuts, .dashboard-notifications {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-overview h3, .dashboard-shortcuts h3, .dashboard-notifications h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.dashboard-overview ul, .dashboard-notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-overview li, .dashboard-notifications li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.dashboard-shortcuts .btn {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.dashboard-shortcuts .btn:hover {
+    background-color: #004494;
+}
+
+.dashboard-notifications li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-notifications li:hover {
+    background-color: #f1f5f9;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: auto;
+    }
+
+    .sidebar ul li {
+        text-align: center;
+        float: none;
+    }
+
+    #admin_dashboard_main {
+        margin-left: 0;
+    }
+}
